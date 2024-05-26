@@ -4,11 +4,11 @@
 
 A machine learning project with multivariate time series to forecast sales, built with Python and scikit-learn, designed for corporation favorita and retail companies aiming to forecast sales and optimize product inventory.
 
-![Python Version](https://img.shields.io/badge/Python-3.11-blue)
-![Data Analysis](https://img.shields.io/badge/Data-Analysis-blue)
-![Data Visualization](https://img.shields.io/badge/Data-Visualization-blue)
-![Hypothesis Testing](https://img.shields.io/badge/Hypothesis-Testing-blue)
-![Machine Learning](https://img.shields.io/badge/Machine-Learning-blue)
+![Python Version](https://img.shields.io/badge/Python-3.11-white)
+![Data Analysis](https://img.shields.io/badge/Data-Analysis-white)
+![Data Visualization](https://img.shields.io/badge/Data-Visualization-white)
+![Hypothesis Testing](https://img.shields.io/badge/Hypothesis-Testing-white)
+![Machine Learning](https://img.shields.io/badge/Machine-Learning-white)
 ![Medium Article](https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white)
 
 
@@ -210,7 +210,7 @@ Link to article on Medium: [From Meeting Product Demands to transforming Invento
 
 - GitHub: [GitHub Profile](https://github.com/D0nG4667)
 
-- LinkedIn: [LinkedIn Profile](https://www.linkedin.com/in/dr-gabriel-okundaye).
+- LinkedIn: [LinkedIn Profile](https://www.linkedin.com/in/dr-gabriel-okundaye)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
