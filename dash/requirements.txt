@@ -82,7 +82,7 @@ jupyter_server_terminals==0.4.4
 jupyterlab==4.0.11
 jupyterlab-pygments==0.1.2
 jupyterlab_server==2.25.1
-kaleido==0.1.0.post1
+kaleido==0.1.0
 kiwisolver==1.4.4
 lightgbm==4.3.0
 linkify-it-py==2.0.0
