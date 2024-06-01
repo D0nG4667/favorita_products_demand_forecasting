@@ -1,13 +1,13 @@
-python=3.11
+python==3.11
 dash
 plotly
 plotly_calplot
 polars
 statsmodels
-joblib
+scikit-learn==1.4.2
+joblib==1.4.2
 catboost
 lightgbm
-scikit-learn
 xgboost
 imbalanced-learn
 neptune
