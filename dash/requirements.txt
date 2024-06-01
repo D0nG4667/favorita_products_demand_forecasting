@@ -28,3 +28,4 @@ SQLAlchemy==2.0.30
 statsmodels==0.14.0
 webp==0.3.0
 xgboost==2.0.3
+gunicorn==22.0.0
