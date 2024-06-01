@@ -20,8 +20,9 @@ app = Dash(__name__)
 server = app.server
 
 
-BASE_DIR = './'
-DASH_DATA = os.path.join(BASE_DIR, 'dash/data')
+# BASE_DIR = './dash/'  # Local
+BASE_DIR = './'  # Render
+DASH_DATA = os.path.join(BASE_DIR, 'data')
 
 header = html.H1(children='Favorita Dashboard', style={'textAlign': 'center'})
 
