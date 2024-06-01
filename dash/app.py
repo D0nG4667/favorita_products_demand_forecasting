@@ -23,6 +23,7 @@ server = app.server
 # BASE_DIR = './dash/'  # Local
 BASE_DIR = './'  # Render
 DASH_DATA = os.path.join(BASE_DIR, 'data')
+TRAIN_CSV = os.path.join(DASH_DATA, 'train.csv')
 
 header = html.H1(children='Favorita Dashboard', style={'textAlign': 'center'})
 
@@ -53,7 +54,7 @@ req = requests.get(url)
 with zipfile.ZipFile(BytesIO(req.content), 'r') as zip_ref:
     zip_ref.extractall(DASH_DATA)
 
-train_df = pl.read_csv('data/train.csv')
+train_df = pl.read_csv(TRAIN_CSV)
 train_df = to_date(train_df)
 
 
