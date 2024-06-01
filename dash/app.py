@@ -10,10 +10,21 @@ from plotly_calplot import calplot
 import polars as pl
 import polars.selectors as cs
 from itertools import product, combinations
+import requests
+import zipfile
+import os
+from io import BytesIO
 
-app = Dash()
+app = Dash(__name__)
+
+server = app.server
+
+
+BASE_DIR = './'
+DASH_DATA = os.path.join(BASE_DIR, 'dash/data')
 
 header = html.H1(children='Favorita Dashboard', style={'textAlign': 'center'})
+
 
 def to_date(df: pl.DataFrame, date_col: str = 'date') -> pl.DataFrame:
     """
@@ -28,15 +39,20 @@ def to_date(df: pl.DataFrame, date_col: str = 'date') -> pl.DataFrame:
     """
     # Convert date column to date type
     df = df.with_columns(df[date_col].cast(pl.Date))
-    
+
     # Sort the dataframe using the date column
     df = df.sort(date_col)
-        
+
     return df
 
-train_df = pl.read_csv(
-    'https://media.githubusercontent.com/media/D0nG4667/favorita_products_demand_forecasting/main/data/source/github/train.csv')
 
+url = 'https://raw.githubusercontent.com/Azubi-Africa/Career_Accelerator_LP3-Regression/main/store-sales-forecasting.zip'
+req = requests.get(url)
+
+with zipfile.ZipFile(BytesIO(req.content), 'r') as zip_ref:
+    zip_ref.extractall(DASH_DATA)
+
+train_df = pl.read_csv('data/train.csv')
 train_df = to_date(train_df)
 
 
@@ -46,16 +62,15 @@ plot_data = plot_data.to_pandas()
 plot_data['date'] = plot_data['date'].astype('datetime64[ns]')
 
 graph = dcc.Graph(
-    figure =
-        calplot(
-            plot_data,
-            x='date',
-            y='sales',
-            years_title=True,
-            colorscale='YlGn',
-            showscale=True,
-            title='Sales by calendar days, months, and years'
-        )
+    figure=calplot(
+        plot_data,
+        x='date',
+        y='sales',
+        years_title=True,
+        colorscale='YlGn',
+        showscale=True,
+        title='Sales by calendar days, months, and years'
+    )
 )
 
 app.layout = [
