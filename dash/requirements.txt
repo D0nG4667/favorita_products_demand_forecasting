@@ -5,6 +5,7 @@ dash-core-components==2.0.0
 dash-html-components==2.0.0
 dash-table==5.0.0
 Flask==3.0.3
+gunicorn==22.0.0
 holidays==0.48
 imbalanced-learn==0.12.2
 joblib==1.4.2
@@ -17,6 +18,7 @@ plotly_calplot==0.1.20
 plotly-resampler==0.10.0
 pmdarima==2.0.4
 polars==0.20.22
+pyarrow==16.0.0
 prophet==1.1.4
 pyodbc==5.1.0
 python-dotenv==1.0.1
@@ -28,4 +30,4 @@ SQLAlchemy==2.0.30
 statsmodels==0.14.0
 webp==0.3.0
 xgboost==2.0.3
-gunicorn==22.0.0
+
